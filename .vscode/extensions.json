@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "ms-ceintl.vscode-language-pack-ja",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "dbaeumer.vscode-eslint",
+    "csstools.postcss",
+    "bradlc.vscode-tailwindcss",
+  ]
+}
