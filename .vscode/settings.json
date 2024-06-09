@@ -1,0 +1,11 @@
+{
+  // ESLint拡張機能ではFlat機能が無効になっているので強制的に有効にする
+  "eslint.experimental.useFlatConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "prettier.configPath": "prettier.config.js"
+}
