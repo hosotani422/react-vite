@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .theme-color-font {
+    @apply theme-light:text-font-light;
+    @apply theme-dark:text-font-dark;
+  }
+  .theme-color-back {
+    @apply theme-light:bg-back-light;
+    @apply theme-dark:bg-back-dark;
+  }
+  .theme-color-border {
+    @apply theme-light:border-font-light;
+    @apply theme-dark:border-font-dark;
+  }
+  .theme-color-mask {
+    @apply theme-light:bg-mask-light;
+    @apply theme-dark:bg-mask-dark;
+  }
+  .theme-color-grad {
+    @apply theme-light:bg-grad-light;
+    @apply theme-dark:bg-grad-dark;
+  }
+  .theme-shadow-inner {
+    @apply theme-light:shadow-inner-light;
+    @apply theme-dark:shadow-inner-dark;
+  }
+  .theme-shadow-outer {
+    @apply theme-light:shadow-outer-light;
+    @apply theme-dark:shadow-outer-dark;
+  }
+  .trans-select-label {
+    @apply speed-fast:duration-200;
+    @apply speed-just:duration-500;
+    @apply speed-slow:duration-1000;
+    @apply transition-[opacity,box-shadow,transform];
+    @apply [&.select]:theme-shadow-inner;
+  }
+  .trans-select-text {
+    @apply speed-fast:duration-200;
+    @apply speed-just:duration-500;
+    @apply speed-slow:duration-1000;
+    @apply transition-[opacity,box-shadow,transform];
+    @apply has-[:focus]:theme-shadow-inner;
+  }
+  .trans-edit-item {
+    @apply speed-fast:duration-200;
+    @apply speed-just:duration-500;
+    @apply speed-slow:duration-1000;
+    @apply transition-[opacity,box-shadow,transform];
+    @apply [&.edit]:z-[1];
+    @apply [&.edit]:scale-[1.03];
+    @apply [&.edit]:theme-shadow-outer;
+    @apply [&.hide]:invisible;
+  }
+  .trans-check-item {
+    @apply speed-fast:duration-200;
+    @apply speed-just:duration-500;
+    @apply speed-slow:duration-1000;
+    @apply transition-[opacity,box-shadow,transform];
+    @apply has-[:checked]:line-through;
+    @apply has-[:checked]:opacity-50;
+  }
+  .trans-option-label {
+    @apply speed-fast:duration-200;
+    @apply speed-just:duration-500;
+    @apply speed-slow:duration-1000;
+    @apply transition-[opacity,box-shadow,transform];
+    @apply group-[.edit]:translate-x-[0%];
+  }
+  .trans-option-text {
+    @apply speed-fast:duration-200;
+    @apply speed-just:duration-500;
+    @apply speed-slow:duration-1000;
+    @apply transition-[opacity,box-shadow,transform];
+    @apply group-[:not(:only-child)]:peer-has-[:focus]/check:translate-x-[0%];
+    @apply group-[:not(:only-child)]:peer-[:focus]/text:translate-x-[0%];
+  }
+  .trans-slide-calendar {
+    @apply speed-fast:theme-current:duration-200;
+    @apply speed-just:theme-current:duration-500;
+    @apply speed-slow:theme-current:duration-1000;
+    @apply theme-current:transition-[transform];
+    @apply [&.back]:translate-x-[-33.333%];
+    @apply [&.next]:translate-x-[-66.666%];
+    @apply [&.prev]:translate-x-0;
+  }
+  .anime-slide-list {
+    @apply speed-fast:anime-active:duration-200;
+    @apply speed-just:anime-active:duration-500;
+    @apply speed-slow:anime-active:duration-1000;
+    @apply anime-active:transition-[background,transform];
+    @apply anime-fromto:!translate-x-[-50%];
+    @apply anime-fromto:!bg-transparent;
+  }
+  .anime-slide-sub {
+    @apply speed-fast:anime-active:duration-200;
+    @apply speed-just:anime-active:duration-500;
+    @apply speed-slow:anime-active:duration-1000;
+    @apply anime-active:transition-[background,transform];
+    @apply anime-fromto:!translate-x-[50%];
+    @apply anime-fromto:!bg-transparent;
+  }
+  .anime-slide-conf {
+    @apply speed-fast:anime-active:duration-200;
+    @apply speed-just:anime-active:duration-500;
+    @apply speed-slow:anime-active:duration-1000;
+    @apply anime-active:transition-[background,transform];
+    @apply anime-fromto:!translate-y-[50%];
+    @apply anime-fromto:!bg-transparent;
+  }
+  .anime-slide-notice {
+    @apply speed-fast:anime-active:duration-200;
+    @apply speed-just:anime-active:duration-500;
+    @apply speed-slow:anime-active:duration-1000;
+    @apply anime-active:transition-[transform];
+    @apply anime-fromto:!translate-y-[4rem];
+  }
+  .anime-fade-item {
+    @apply speed-fast:anime-active:duration-200;
+    @apply speed-just:anime-active:duration-500;
+    @apply speed-slow:anime-active:duration-1000;
+    @apply anime-active:transition-[opacity];
+    @apply anime-fromto:opacity-0;
+  }
+  .anime-scale-item {
+    @apply speed-fast:anime-active:duration-200;
+    @apply speed-just:anime-active:duration-500;
+    @apply speed-slow:anime-active:duration-1000;
+    @apply anime-active:transition-[height,padding,transform];
+    @apply anime-fromto:!h-0;
+    @apply anime-fromto:!py-0;
+    @apply anime-fromto:!scale-y-0;
+  }
+}

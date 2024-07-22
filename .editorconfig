@@ -1,0 +1,21 @@
+# .editorconfigファイルの上位階層探索
+root = true
+
+[*]
+# インデントの種類 [space | tab]
+indent_style = space
+# インデントの幅
+indent_size = 2
+# 文字コード
+charset = utf-8
+# 改行コード
+end_of_line = lf
+# 行末の空白を削除
+trim_trailing_whitespace = true
+# 最終行に空行を挿入
+insert_final_newline = true
+# 強制改行（特殊エディタ限定機能）
+max_line_length = false
+
+[*.md]
+trim_trailing_whitespace = false
